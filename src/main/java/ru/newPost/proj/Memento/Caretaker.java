@@ -16,7 +16,6 @@ public class Caretaker {
         if (mementoList.isEmpty()) {
             return;
         }
-
         MementoClass memento = mementoList.get(mementoList.size() - 1);
         mementoList.remove(mementoList.size() - 1);
         pack.restore(memento);

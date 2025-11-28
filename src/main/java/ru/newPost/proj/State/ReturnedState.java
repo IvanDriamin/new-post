@@ -8,7 +8,7 @@ public class ReturnedState implements StateInterface {
 
     @Override
     public void returned(Context context) {
-        System.out.println("посылка возвращена");
+        System.out.println("Посылка возвращена");
     }
 
     @Override

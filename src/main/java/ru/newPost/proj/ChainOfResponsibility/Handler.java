@@ -14,5 +14,5 @@ abstract class Handler {
         }
     }
 
-    protected abstract void process(int start_point_id, int current_point_id, int destination_point_id, String sended_at);
+    public abstract void process(int start_point_id, int current_point_id, int destination_point_id, String sended_at);
 }

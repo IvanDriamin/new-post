@@ -23,7 +23,6 @@ public class PackageService {
     public Optional<Package> getPackageById(Long id) {
         Optional<Package> Package = PackageRepository.findById(id);
         return PackageRepository.findById(id);
-        //return Event.orElseThrow(() -> new EventNotFoundException("Event not found with id: " + id));
     }
 
     public Package createPackage(Package Package) {
@@ -31,13 +30,8 @@ public class PackageService {
     }
 
     public Package updatePackage(Long id, Package updatedPackage) {
-        //if (!EventRepository.existsById(Event.getId())) {
-        //    throw new EventNotFoundException("Event not found with id: " + Event.getId());
-        //}
-
         Optional<Package> existingPackage = PackageRepository.findById(id);
         if (existingPackage.isPresent()) {
-            //updatedPackage.setId(id);
             return PackageRepository.save(updatedPackage);
         } else {
             return null;
@@ -45,9 +39,6 @@ public class PackageService {
     }
 
     public void deletePackage(Long id) {
-        //if (!EventRepository.existsById(id)) {
-        //    throw new EventNotFoundException("Event not found with id: " + id);
-        //}
         PackageRepository.deleteById(id);
     }
 }

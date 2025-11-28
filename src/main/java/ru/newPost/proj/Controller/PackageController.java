@@ -16,8 +16,8 @@ public class PackageController {
     private final PackageService PackageService;
 
     @Autowired
-    public PackageController (PackageService PackageSevice) {
-        this.PackageService = PackageSevice;
+    public PackageController (PackageService PackageService) {
+        this.PackageService = PackageService;
     }
 
     @GetMapping("/getAll")
@@ -31,16 +31,13 @@ public class PackageController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Package> CreatePackage (@RequestBody Package Package/*, EventService eventService*/) {
+    public ResponseEntity<Package> CreatePackage (@RequestBody Package Package) {
         Package createdPackage = PackageService.createPackage(Package);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPackage);
-        //return eventService.createEvent(Event);
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Package> updatePackage (@PathVariable Long id, @RequestBody Package updatedPackage/*Event Event, EventService eventService*/) {
-        //return eventService.updateEvent(Event);
-
+    public ResponseEntity<Package> updatePackage (@PathVariable Long id, @RequestBody Package updatedPackage) {
         Package updated =  PackageService.updatePackage(id, updatedPackage);
         if (updated != null) {
             return ResponseEntity.ok(updated);
@@ -50,9 +47,7 @@ public class PackageController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> DeletePackage (@PathVariable Long id/*, EventService eventService*/) {
-        //eventService.deleteEvent(id);
-
+    public ResponseEntity<Void> DeletePackage (@PathVariable Long id) {
         PackageService.deletePackage(id);
         return ResponseEntity.noContent().build();
     }
