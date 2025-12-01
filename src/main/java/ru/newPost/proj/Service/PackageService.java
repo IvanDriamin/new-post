@@ -3,6 +3,7 @@ package ru.newPost.proj.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.newPost.proj.Repository.PackageRepository;
+import ru.newPost.proj.Model.Package;
 
 import java.util.List;
 import java.util.Optional;

@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.newPost.proj.Service.PackageService;
+import ru.newPost.proj.Model.Package;
 
 import java.util.List;
 import java.util.Optional;
