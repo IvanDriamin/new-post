@@ -35,19 +35,19 @@ public class Package {
     private float cost;
 
     @Column(name = "sender_id")
-    private int sender_id;
+    private int sender_id = 1;
 
     @Column(name = "recipient_id")
-    private int recipient_id;
+    private int recipient_id = 2;
 
     @Column(name = "start_point_id")
-    private int start_point_id;
+    private int start_point_id = 12;
 
     @Column(name = "current_point_id")
-    private int current_point_id;
+    private int current_point_id = 13;
 
     @Column(name = "destination_point_id")
-    private int destination_point_id;
+    private int destination_point_id = 23;
 
     @Column(name = "sended_at")
     private String sended_at;
@@ -62,6 +62,5 @@ public class Package {
         this.current_point_id = memento.getSavedState();
         System.out.println("Текущий пункт: " + current_point_id);
     }
-
-
+    
 }

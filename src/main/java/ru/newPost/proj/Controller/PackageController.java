@@ -27,7 +27,7 @@ public class PackageController {
     }
 
     @GetMapping("/get/{id}")
-    public Optional<Package> GetJournal (@PathVariable Long id) {
+    public Optional<Package> GetPackageById (@PathVariable Long id) {
         return PackageService.getPackageById(id);
     }
 
