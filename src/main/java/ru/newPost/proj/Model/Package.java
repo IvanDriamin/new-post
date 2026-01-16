@@ -22,6 +22,9 @@ public class Package {
     @Column(name = "code")
     private String code;
 
+    @Column(name = "status")
+    private Status status;
+
     @Column(name = "package_type")
     private package_type package_type;
 
@@ -51,6 +54,9 @@ public class Package {
 
     @Column(name = "sended_at")
     private String sended_at;
+
+    @Column(name = "updated_at")
+    private String updated_at;
 
     // Создает снимок состояния
     public MementoClass save() {
