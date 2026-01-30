@@ -8,7 +8,7 @@ import lombok.Setter;
 import ru.newPost.proj.Memento.MementoClass;
 
 @Entity
-@Table(name = "package")
+@Table(name = "packages")
 @Getter
 @Setter
 @NoArgsConstructor
